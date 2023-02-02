@@ -3,7 +3,8 @@ package basic;
 public class SungJuk {
 	
 	public static void main(String[] args) {
-		String name = "L";
+//		String name = "L";
+		char name = 'L';		
 		int kor = 85;
 		int eng = 78;
 		int math = 100;
