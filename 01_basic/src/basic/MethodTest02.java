@@ -20,7 +20,7 @@ public class MethodTest02 {
 		ar[0] = 25;
 		ar[1] = 13;
 		ar[2] = 45;
-		ar[3] = 30;
+		ar[3] = 30;	
 		ar[4] = 15;
 		System.out.println(ar[0] + ", " + ar[1] + ", " + ar[1] + ", " + ar[2] + ", " 
 				+ ar[3] + ", " + ar[4]);	// 25, 13, 13, 45, 30, 15

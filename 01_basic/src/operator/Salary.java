@@ -42,6 +42,7 @@ public class Salary {
 		System.out.println("세금 : " + tax_f + "원");
 		System.out.println("월급 : " + mon_income +"원");
 		
+		
 	}
 }
 

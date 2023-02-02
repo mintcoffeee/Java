@@ -9,7 +9,7 @@ public class Operator01 {
 		
 		System.out.print("점수 입력 : ");
 		int score = scan.nextInt();
-		
+	
 		// 조건 ? 참 : 거짓;
 		String result = score >= 80 && score <= 100 ? "합격" : "불합격";
 		System.out.println(result);

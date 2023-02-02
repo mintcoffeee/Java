@@ -8,7 +8,7 @@ public class Operator03 {
 		a *= 3;
 		a /= 5;
 		System.out.println("a = " + a);	// 4 
-		
+	
 		a++;
 		System.out.println("a = " + a);	// 5
 		

@@ -6,7 +6,7 @@ public class Comp {
 //		char ch = 'B';
 		char ch = 'e';
 //		System.out.println((int)'Z');	// 90
-		
+	
 		int result = ch >= 65 && ch <= 90 ? ch + 32 : ch - 32;
 //		System.out.println(ch >= 65 && ch <= 90 ? (char)(ch + 32) : (char)(ch - 32));
 //		System.out.println(ch >= 'A' && ch <= 'Z' ? (char)(ch + 32) : (char)(ch - 32)););

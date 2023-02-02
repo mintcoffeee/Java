@@ -30,7 +30,6 @@ public class Variable02 {
 		System.out.println("Test class a = " + tt.a);	// a =10
 		System.out.println("Test class b = " + Test.b);	// b = 20, 다른 class 이기 때문에 Test 는 생략 할 수 없다. 
 		System.out.println("Test class str = " + Test.str);	// null
-		
 	
 	}
 }

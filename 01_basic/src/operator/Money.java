@@ -10,7 +10,7 @@ public class Money {
 		Scanner scan = new Scanner(System.in); // 키보드로부터 입력받는 Scanner 클래스를 생성
 		System.out.print("돈 입력 : ");
 		money = scan.nextInt();
-		
+	
 		/*
 		int thousand = money / 1000;	// 5
 		int thousand_mode = money % 1000;	// 378

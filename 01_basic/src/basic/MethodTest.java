@@ -20,6 +20,6 @@ public class MethodTest {
 		System.out.println("8진수 = " + oct);		// 372
 		// 16진수
 		String hexa = Integer.toHexString(250);
-		System.out.println("16진수 = " + hexa);	// fa
+		System.out.println("16진수 = " + hexa);	//fa
 	}
 }
