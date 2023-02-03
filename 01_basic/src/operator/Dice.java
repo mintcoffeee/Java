@@ -5,8 +5,8 @@ public class Dice {
 	public static void main(String[] args) {
 		int dice1, dice2;
 //		System.out.println(Math.random());
-		dice1 = (int)(Math.random() * 5 + 1);
-		dice2 = (int)(Math.random() * 5 + 1);
+		dice1 = (int)(Math.random() * 6 + 1);
+		dice2 = (int)(Math.random() * 6 + 1);
 	
 		String result = dice1 > dice2 ? "주사위1 승" :
 			dice1 < dice2 ? "주사위2 승" : "무승부";

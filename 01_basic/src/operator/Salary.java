@@ -11,13 +11,13 @@ public class Salary {
 		int income1, income2;
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("이름 입력 : ");
+		System.out.print("이름 입력 : ");
 		name = sc.next();
-		System.out.println("직급 입력 : ");
+		System.out.print("직급 입력 : ");
 		grade = sc.next();
-		System.out.println("기본급 입력 : ");
+		System.out.print("기본급 입력 : ");
 		income1 = sc.nextInt();
-		System.out.println("수당 입력 : ");
+		System.out.print("수당 입력 : ");
 		income2 = sc.nextInt();
 		
 		double tax_p;
@@ -29,19 +29,24 @@ public class Salary {
 		
 		DecimalFormat df = new DecimalFormat();
 //		NumberFormat df =  NumberFormat.getInstance();
-		String income1_f = df.format(income1);
-		String income2_f = df.format(income2);
-		String sum_f = df.format(sum);
-		String tax_f = df.format(tax);
-		String mon_income = df.format(sum - tax);
+//		String income1_f = df.format(income1);
+//		String income2_f = df.format(income2);
+//		String sum_f = df.format(sum);
+//		String tax_f = df.format(tax);
+//		String mon_income = df.format(sum - tax);
 		
+//		System.out.println("*** " + name + " " + grade + " 월급 ***");
+//		System.out.println("기본급 : " + income1_f + "원" );
+//		System.out.println("수당 : " + income2_f + "원");
+//		System.out.println("합계 : " + sum_f + "원");
+//		System.out.println("세금 : " + tax_f + "원");
+//		System.out.println("월급 : " + mon_income +"원");
 		System.out.println("*** " + name + " " + grade + " 월급 ***");
-		System.out.println("기본급 : " + income1_f + "원" );
-		System.out.println("수당 : " + income2_f + "원");
-		System.out.println("합계 : " + sum_f + "원");
-		System.out.println("세금 : " + tax_f + "원");
-		System.out.println("월급 : " + mon_income +"원");
-		
+		System.out.println("기본급 : " + df.format(income1) + "원" );
+		System.out.println("수당 : " + df.format(income2) + "원");
+		System.out.println("합계 : " + df.format(sum) + "원");
+		System.out.println("세금 : " + df.format(tax) + "원");
+		System.out.println("월급 : " + df.format(sum - tax) +"원");
 		
 	}
 }
