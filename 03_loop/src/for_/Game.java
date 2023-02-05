@@ -8,10 +8,10 @@ public class Game {
 		String shape[] = {"가위", "바위", "보"};
 		Scanner scan = new Scanner(System.in);
 		
-		
 		System.out.print("insert coin : ");
 		int insertCoin = scan.nextInt();
 		
+		//300원당 한게임 진행 
 		for(int i=insertCoin/300; i>0 ; i--) {
 			int com = (int)(Math.random()*3 +1);
 			System.out.print("가위(1), 바위(2), 보(3) 중 번호 입력 : ");
@@ -22,19 +22,19 @@ public class Game {
 				continue;
 			}
 			System.out.println("컴퓨터 : " + shape[com-1] + "\t나 : " + shape[user-1]);
-			for(int j =1; j<4; j++) {
-				if(user==j) {
-					if(com == (j-1==0 ? j=3 : j-1)) 
-						System.out.println("You Win!!\n");
-					else if(com==j) 
-						System.out.println("You Draw!!\n");
-					else
-						System.out.println("You Lose!!\n");
-				}
-			}
 			
-				
-		}
+			// 컴퓨터와 user의 값 비교 
+			for(int j=1; j<4; j++) {
+				if(user==j) {
+				    if(com == (j-1<=0 ? j+2 : j-1)) 
+				        System.out.println("You Win!!\n");
+				    else if(com == j) 
+				        System.out.println("You Draw!!\n");
+				    else
+				        System.out.println("You Lose!!\n");
+				}
+			}//for(j)
+		}// for(i)
 		System.out.println("you need to insert coin");
 	}
 
