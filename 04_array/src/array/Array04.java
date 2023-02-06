@@ -25,12 +25,12 @@ public class Array04 {
 			if(num == 1) {
 				System.out.print("위치 입력 : ");
 				position = scan.nextInt();
-				if(ar[position-1]) {	
+				if(ar[position-1]) {	// true 일 때	
 					// ar[position-1] == true 이렇게 표기하지 않는다.
 					// ar[position-1] 이 값 자체만으로 true, false값이다.
 					
 					System.out.println("이미 주차되어있습니다\n");
-				}else {
+				}else {	// false 일 때 
 					ar[position-1] = true;
 					System.out.println(position + "위치에 입차\n");
 				}
@@ -39,10 +39,10 @@ public class Array04 {
 				System.out.print("위치 입력 : ");
 				position = scan.nextInt();
 				
-				if(ar[position-1]) {
+				if(ar[position-1]) {	// true 일 때 
 					ar[position-1] = false;
 					System.out.println(position + "위치에 출차\n");
-				}else {
+				}else {	// false 일 때 
 					System.out.println("주차되어 있지않습니다\n");	
 				}
 				
