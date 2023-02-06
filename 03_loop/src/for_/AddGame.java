@@ -13,7 +13,7 @@ public class AddGame {
 			a = (int)(Math.random() * 90 + 10);	//10 ~ 99
 			b = (int)(Math.random() * 90 + 10);
 			
-			for(int j=0; j<2;j++) {
+			for(int j=0; j<2;j++) {	// 틀리면 기회를 1번더
 				System.out.print("[" + i + "] " + a + " + "+ b + " = ");
 				dab = scan.nextInt();
 				
@@ -26,7 +26,6 @@ public class AddGame {
 						System.out.println("틀렸다.");	
 					else 
 						System.out.println("틀렸다...정답은 " + (a + b));
-					continue;
 				}
 			}//for(j)
 			
