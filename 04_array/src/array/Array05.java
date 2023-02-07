@@ -18,7 +18,7 @@ public class Array05 {
 				count[random-65]++;
 				System.out.print(ar[num]+ " ");
 				num++;
-			}
+			}// for j
 			System.out.println();
 		}//for i
 		
