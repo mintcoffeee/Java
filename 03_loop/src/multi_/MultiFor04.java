@@ -7,8 +7,8 @@ public class MultiFor04 {
 			for(int j=1; j<10; j++) {
 				
 				for(int dan=i; dan<i+3; dan++) {
-					if(dan==10) break;
-					System.out.print(dan + " * " + j + " = " + dan*j + "\t");
+//					if(dan==10) break;
+					if(dan != 10) System.out.print(dan + " * " + j + " = " + dan*j + "\t");
 				}//for dan
 				
 				System.out.println();
