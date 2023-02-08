@@ -22,9 +22,11 @@ public class BaseBall {
 				}
 			}
 		}//for i
-		for(int i=0; i<3; i++) {
-			System.out.print(com[i]+"  ");
-		}System.out.println();
+		//난수 찍어보기	 
+//		for(int i=0; i<com.length; i++) {
+//			System.out.print(com[i]+"  ");
+//		}System.out.println();
+		
 		//게임 실행 
 		outerloop :
 		while(true) {
@@ -44,7 +46,7 @@ public class BaseBall {
 				
 				int strikeCount=0, ballCount=0;
 				for(int i=0; i<user.length; i++) {
-					user[i] = (comand.charAt(i)-'0');
+					user[i] = comand.charAt(i)-'0';
 					
 					//스트라이크, 볼 카운트 
 					for(int j=0; j<user.length; j++) {
