@@ -22,11 +22,9 @@ public class BaseBall {
 				}
 			}
 		}//for i
-//		for(int i=0; i<3; i++) {
-//			System.out.print(com[i]+"  ");
-//		}
-		System.out.println();
-		
+		for(int i=0; i<3; i++) {
+			System.out.print(com[i]+"  ");
+		}System.out.println();
 		//게임 실행 
 		outerloop :
 		while(true) {
@@ -44,12 +42,22 @@ public class BaseBall {
 				System.out.print("숫자 입력 : ");
 				String comand = scan.next();
 				
+				int strikeCount=0, ballCount=0;
 				for(int i=0; i<user.length; i++) {
 					user[i] = (comand.charAt(i)-'0');
+					
+					//스트라이크, 볼 카운트 
+					for(int j=0; j<user.length; j++) {
+						if(user[i]==com[j] && i==j) {
+							strikeCount++;
+						}else if(user[i]==com[j] && i!=j) {
+							ballCount++;
+						}
+					}//for j
 				}//for i
 				
-				//스트라이크, 볼 카운
-				int strikeCount=0, ballCount=0;
+				/*
+				//스트라이크, 볼 카운트
 				for(int j=0; j<user.length; j++) {
 					if(user[j]==com[j]) {
 						strikeCount++;
@@ -62,6 +70,7 @@ public class BaseBall {
 						}//for k
 					}
 				}//for j
+				*/
 				
 				//출력 
 				System.out.println(strikeCount+"스트라이크" + ballCount + "볼");
