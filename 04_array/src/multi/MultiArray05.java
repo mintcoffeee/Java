@@ -9,27 +9,27 @@ public class MultiArray05 {
 		String[][] subject;
 		String[] name;
 		int[][] jumsu;
-		int[] subjectCnt;
+		int subjectCnt;
 		
+		//반복횟수 설정 
 		System.out.print("인원수 : ");
 		int cnt = scan.nextInt();
 		//초기값 
 		name = new String[cnt];
-		subjectCnt = new int[cnt];
 		double[] avg = new double[cnt];
 		subject = new String[cnt][];
 		jumsu = new int[cnt][];
 		
 		System.out.println();
-		//정보 입력 
+		//정보 입력 , cnt 만큼 반복 
 		for(int i=0; i<cnt; i++) {
 			System.out.print("이름 입력 : ");
 			name[i] = scan.next();
 			
 			System.out.print("과목 수 입력 : ");
-			subjectCnt[i] = scan.nextInt();
-			subject[i] = new String[subjectCnt[i]];
-			jumsu[i] = new int[subjectCnt[i] + 1];
+			subjectCnt = scan.nextInt();
+			subject[i] = new String[subjectCnt];
+			jumsu[i] = new int[subjectCnt + 1];
 			
 			//과목명 입력 
 			for (int j = 0; j < subject[i].length; j++) {
@@ -38,13 +38,13 @@ public class MultiArray05 {
 			} //for i 
 		
 			//점수 입력 
-			for (int j = 0; j < subjectCnt[i]; j++) {
+			for (int j = 0; j < subjectCnt; j++) {
 				System.out.print(subject[i][j] + "점수 입력 : ");
 				jumsu[i][j] = scan.nextInt();
-				jumsu[i][subjectCnt[i]] += jumsu[i][j];	//총점  
+				jumsu[i][subjectCnt] += jumsu[i][j];	//총점  
 			} //for j
 			//평균 
-			avg[i] = jumsu[i][subjectCnt[i]] / (double)subjectCnt[i];
+			avg[i] = jumsu[i][subjectCnt] / (double)subjectCnt;
 			System.out.println();
 		}//for i
 		
@@ -63,7 +63,7 @@ public class MultiArray05 {
 			//과목별 점수, 총점 
 			for (int j = 0; j < jumsu[i].length; j++) {
 				System.out.print(jumsu[i][j] + "\t");
-			} //for k
+			} //for j 
 			
 			//평균 
 			System.out.print(String.format("%5.2f", avg[i]));
