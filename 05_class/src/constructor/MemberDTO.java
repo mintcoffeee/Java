@@ -29,6 +29,16 @@ public class MemberDTO { // 1 인분
 		return address;
 	}
 	
+	//setter
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
 }
 
 //D : Data

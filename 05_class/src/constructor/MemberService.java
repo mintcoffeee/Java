@@ -22,10 +22,11 @@ public class MemberService {
 			System.out.print("번호 : ");
 			int num = scan.nextInt();
 			
+			System.out.println();
 			if(num == 5) break;
 			
 			if(num == 1) 
-				this.insertArticle();
+				this.insert();
 			else if(num == 2) 
 				this.list();
 			else if(num==3) 
@@ -34,7 +35,7 @@ public class MemberService {
 				this.delete();
 		}//while
 	}
-	public void insertArticle() {	
+	public void insert() {	
 	//함수는 기본으로 private로 잡힌다. public 으로 바꿔주는 것이 좋다.
 		int i;
 		for(i=0; i<ar.length; i++) {
@@ -55,6 +56,7 @@ public class MemberService {
 		String address = scan.next();
 		System.out.println("1 row created");
 		
+		//객체 배열 생성 
 		for(i=0; i<ar.length; i++) {
 			if(ar[i] == null) {
 				ar[i] = new MemberDTO(name, age, phone, address);
@@ -73,11 +75,12 @@ public class MemberService {
 		}//for i
 	}
 	public void update() {
-		System.out.println("핸드폰 번호 입력 : ");
+		System.out.print("핸드폰 번호 입력 : ");
 		String phone = scan.next();
 		int i;
 		for(i=0; i<ar.length; i++) {
 			if(ar[i] != null && ar[i].getPhone().equalsIgnoreCase(phone)) {
+				//ar[i].getPhone() == phone 는 주소가 같은지 물어보는 조건문이다.
 				System.out.println(ar[i].getName() +"\t"+
 						ar[i].getAge() +"\t"+
 						ar[i].getPhone() +"\t"+
@@ -90,17 +93,26 @@ public class MemberService {
 			return;
 		}
 		
-		System.out.println("수정 할 이름 입력 : ");
+		System.out.print("수정 할 이름 입력 : ");
 		String name = scan.next();
-		System.out.println("수정 할 핸드폰 입력 : ");
+		System.out.print("수정 할 핸드폰 입력 : ");
 		phone = scan.next();
-		System.out.println("수정 할 주소 입력 : ");
+		System.out.print("수정 할 주소 입력 : ");
 		String address = scan.next();
 		
-		ar[i] = new MemberDTO(name, ar[i].getAge(), phone, address);
+		ar[i].setName(name);
+		ar[i].setPhone(phone);
+		ar[i].setAddress(address);
+		
+//		ar[i] = new MemberDTO(name, ar[i].getAge(), phone, address);
+		//기존의 객체배열을 수정하는 것이 아닌 새로운 객체 배열을 생성 
+		//기존의 객체배열이 삭제되는데 cost가 소요, user가 수도없이 많을 경우 과부하가 발생한다.
+		
+		
+		System.out.println("1 row(s) updated");
 	}
 	public void delete() {
-		System.out.println("핸드폰 번호 입력 : ");
+		System.out.print("핸드폰 번호 입력 : ");
 		String phone = scan.next();
 		int i;
 		for(i=0; i<ar.length; i++) {
