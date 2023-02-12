@@ -40,8 +40,8 @@ public class StringMain {
 		System.out.println("대문자 변경 = " + "Hello".toUpperCase());
 		System.out.println("소문자 변경 = " + "Hello".toLowerCase());
 		
-		System.out.println("문자열 검색 = " + e.indexOf("짜"));
-		System.out.println("문자열 검색 = " + e.indexOf("날짜"));
+		System.out.println("문자열 검색 = " + e.indexOf("짜"));	//4
+		System.out.println("문자열 검색 = " + e.indexOf("날짜"));//3
 		System.out.println("문자열 검색 = " + e.indexOf("개바부")); //-1 없으면 
 		
 		System.out.println("문자열 치환 = " + e.replace("날짜", "일자")); 

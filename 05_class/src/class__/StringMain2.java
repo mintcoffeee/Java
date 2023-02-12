@@ -5,17 +5,27 @@ public class StringMain2 {
 
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
+		int cnt = 0, index=0;
 		while(true) {
-			System.out.println("문자열 입력 : ");
+			System.out.print("문자열 입력 : ");
 			String a = s.next();
-			System.out.println("현재 문자열 입력 : ");
+			System.out.print("현재 문자열 입력 : ");
 			String now = s.next();
-			System.out.println("바꿀 문자열 입력 : ");
+			System.out.print("바꿀 문자열 입력 : ");
 			String change = s.next();
-			
-//			if(a.indexOf(now) ) {
-				
+			if(a.length() < now.length()) System.out.println("입력한 문자열의 크기가 작습니다");
+			if(a.indexOf(now, index) == -1) {
+				System.out.println("치환할 수 없습니다.");
+				break;
 			}
+			for(int i=0; i<a.length(); i++) {
+				if(a.indexOf(now, index) != -1) {
+					index += a.indexOf(now,index)+ now.length();
+					cnt++;
+				}
+			}
+			System.out.println(a.replace(now, change)); 
+			System.out.println(cnt + "번 치환");
 		}
 	}
 }
