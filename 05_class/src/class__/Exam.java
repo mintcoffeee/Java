@@ -8,25 +8,22 @@ public class Exam {
 	private int score = 0;
 	private final String JUNG = "11111"; //상수화
 	private char[] ox = new char[JUNG.length()];
-	Scanner sc = new Scanner(System.in);
+	
 	public Exam() {
+		Scanner sc = new Scanner(System.in);
 		System.out.print("이름 입력 : ");
-		String name = sc.next();
+		this.name = sc.next();
 		System.out.print("답 입력 : ");
-		String dap = sc.next();
-		this.name = name;
-		this.dap = dap;
+		this.dap  = sc.next();
+		System.out.println();
 	}
-	public void compare() {
+	public void compare() {	//void return값이 없다. 
 		for(int i=0; i<JUNG.length(); i++) {
 			if(dap.charAt(i)==JUNG.charAt(i)) {
 				ox[i] = 'O';
-				setOx(ox);
 				score += 20;
-			}
-			if(dap.charAt(i)!=JUNG.charAt(i)) {
+			}else {
 				ox[i] = 'X';
-				setOx(ox);
 			}
 		}
 	}
@@ -36,18 +33,12 @@ public class Exam {
 	public int getScore() {
 		return score;
 	}
-	public void setScore(int score) {
-		this.score = score;
-	}
 	public char[] getOx() {
 		return ox;
 	}
-	public void setOx(char[] ox) {
-		this.ox = ox;
-	}
-	
 
 }
+
 /*
 * 필드
 private String name = null;

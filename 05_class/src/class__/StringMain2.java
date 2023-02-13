@@ -13,20 +13,23 @@ public class StringMain2 {
 			String now = s.next();
 			System.out.print("바꿀 문자열 입력 : ");
 			String change = s.next();
-			if(a.length() < now.length()) System.out.println("입력한 문자열의 크기가 작습니다");
-			if(a.indexOf(now, index) == -1) {
+			if(a.length() < now.length()) {
+				System.out.println("입력한 문자열의 크기가 작습니다");
 				System.out.println("치환할 수 없습니다.");
-				break;
+//				break;
+//				return;	//함수를 벗어나라 
+				System.exit(0);	// 프로그램 강제 종
 			}
-			for(int i=0; i<a.length(); i++) {
-				if(a.indexOf(now, index) != -1) {
-					index += a.indexOf(now,index)+ now.length();
-					cnt++;
-				}
+			//indexOf : 처음에 만난 now 위치를 알려준다. 
+			a = a.toLowerCase();	//소문자 변환 
+			now = now.toLowerCase();	
+			while(a.indexOf(now, index) != -1) {
+				index += a.indexOf(now,index)+ now.length();
+				cnt++;
 			}
 			System.out.println(a.replace(now, change)); 
 			System.out.println(cnt + "번 치환");
-		}
+		}//while
 	}
 }
 

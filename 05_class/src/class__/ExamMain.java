@@ -16,17 +16,24 @@ public class ExamMain {
 		}	
 		
 		//출력 
-		for(int i=0; i<cnt; i++) {
-			System.out.println("이름\t1\t2\t3\t4\t5\t점수");
-			System.out.print(ex[i].getName() + "\t");
-//							+ ex[i].getOx() + "\t"
-//							+ ex[i].getScore());
-			
+		System.out.println("이름\t1\t2\t3\t4\t5\t점수");
+//		for(int i=0; i<cnt; i++) {
+//			System.out.print(ex[i].getName() + "\t");
+////							+ ex[i].getOx() + "\t"
+////							+ ex[i].getScore());
+//			for(int j=0; j<5;j++) {
+//				System.out.print(ex[i].getOx()[j] + "\t");
+//			}//for j
+//			System.out.print(ex[i].getScore()+"\n");
+//		}//for i
+		for(Exam e : ex) {
+			System.out.print(e.getName() + "\t");
 			for(int j=0; j<5;j++) {
-				System.out.print(ex[i].getOx()[j] + "\t");
-			}
-			System.out.print(ex[i].getScore());
+				System.out.print(e.getOx()[j] + "\t");
+			}//for j
+			System.out.print(e.getScore()+"\n");
 		}
+		
 	}
 	
 }
@@ -65,8 +72,8 @@ getScore()
 이름 입력 : 코난
 답 입력 : 24331
 
-이름      1 2 3 4 5   점수
-홍길동     O X X O O   60
+이름		1 2 3 4 5   점수
+홍길동	O X X O O   60
 코난     X X X X O   20
 
 
