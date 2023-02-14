@@ -29,7 +29,7 @@ class CalendarEx{
 		}
 		for(int i=1; i<=max; i++) {
 			System.out.print(i + "\t");
-			if((i+w-1)>=7 && (i+w-1)%7 ==0) System.out.println();
+			if((i+w-1)%7 ==0) System.out.println();
 		}
 	}
 }
