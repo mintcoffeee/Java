@@ -16,12 +16,12 @@ class CalendarEx{
 		Calendar cal = Calendar.getInstance();
 		
 		//생성할 때 기준인 시스템 날짜를 내가 원하는 날짜로 변경 
-		cal.set(Calendar.YEAR,y);
-		cal.set(Calendar.MONTH,m-1);
-		
+		cal.set(Calendar.YEAR,y);	//년도
+		cal.set(Calendar.MONTH,m-1);	//월
 		cal.set(Calendar.DAY_OF_MONTH,1);	//DAY_OF_MONTH를 1로 설정 (월의 첫날)
-		w = cal.get(Calendar.DAY_OF_WEEK);	//그 주의 요일 반환 (일:1 ~ 토:7)
+//		cal.set(y, m-1, 1);	//년, 월, 
 		
+		w = cal.get(Calendar.DAY_OF_WEEK);	//그 주의 요일 반환 (일:1 ~ 토:7)
 		max = cal.getActualMaximum(Calendar.DAY_OF_MONTH);	//그 달의 말일 
 	}
 	public void display() {
