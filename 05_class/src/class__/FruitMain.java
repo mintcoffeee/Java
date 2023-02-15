@@ -21,6 +21,7 @@ class Fruit {
 		System.out.println(pum+"\t"+jan+"\t"+feb+"\t"+mar+"\t"+tot);
 	}
 	public static void output() {
+		System.out.println("------------------------------------");
 		System.out.println("\t"+sumJan+"\t"+sumFeb+"\t"+sumMar);
 	}
 	
@@ -29,21 +30,16 @@ class Fruit {
 public class FruitMain {
 	
 	public static void main(String[] args) {
-		Fruit[] fruit = new Fruit[3];
-		fruit[0] = new Fruit("사과", 100, 80, 75);
-		fruit[1] = new Fruit("포도", 30, 25, 10);
-		fruit[2] = new Fruit("딸기", 25, 30, 90);
+		Fruit[] fruit = {new Fruit("사과", 100, 80, 75),
+						new Fruit("포도", 30, 25, 10),
+						new Fruit("딸기", 25, 30, 90)};
+		System.out.println("------------------------------------");
+		System.out.println("PUM\tJAN]\tFEB\tMAR\tTOT");
+		System.out.println("------------------------------------");
 		for(int i=0; i<fruit.length; i++) {
 			fruit[i].calcTot();
-		}//for 
-		
-		System.out.println("---------------------------------");
-		System.out.println("PUM\tJAN]\tFEB\tMAR\tTOT");
-		System.out.println("---------------------------------");
-		for(int i=0; i<fruit.length; i++) {
 			fruit[i].display();
 		}//for 
-		System.out.println("---------------------------------");
 		Fruit.output();
 	}
 
