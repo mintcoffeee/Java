@@ -14,6 +14,8 @@ class CalendarEx{
 	}
 	public void calc() {
 		Calendar cal = Calendar.getInstance();
+		
+		//생성할 때 기준인 시스템 날짜를 내가 원하는 날짜로 변경 
 		cal.set(Calendar.YEAR,y);
 		cal.set(Calendar.MONTH,m-1);
 		
