@@ -19,6 +19,7 @@ public class CollectionMain {
 		//노란밑줄 : warning error 틀린거는 아니지만 수정하는게 좋다. 
 		//모든 type이 다 들어와서 불안하다 generic '<>' 을 걸어라 
 		Iterator it = coll.iterator();
+		
 //		it.hasnext(); -> 항목이 있냐? (true), 없으면 (false)
 //		it.next() -> 항목을 꺼내고 다음 항목으로 이동 
 		while(it.hasNext()) {
