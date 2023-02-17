@@ -2,7 +2,7 @@ package member;
 
 import java.io.Serializable;
 
-public class MemberDTO implements Comparable<MemberDTO>, Serializable{
+public class MemberDTO implements Comparable<MemberDTO>,Serializable{
 	private String name, phone, address;
 	private int age;
 	

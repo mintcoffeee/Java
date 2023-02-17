@@ -10,15 +10,13 @@ public class MemberNameAsc implements Member {
 	@Override
 	public void execute(List<MemberDTO> list) {
 //		Collections.sort(list, new NameComparator());
-//		new MemberPrint().execute(list);
+		Collections.sort(list);	//수업시간 풀이 
 		
-		// 수업시간에 한 풀이
-		Collections.sort(list);
 		new MemberPrint().execute(list);
 	}
 }
 
-//내 풀
+//내 풀이 	
 class NameComparator implements Comparator<MemberDTO>{
 
 	@Override
