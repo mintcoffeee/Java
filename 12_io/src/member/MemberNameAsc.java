@@ -9,8 +9,8 @@ public class MemberNameAsc implements Member {
 
 	@Override
 	public void execute(List<MemberDTO> list) {
-//		Collections.sort(list, new NameComparator());
-		Collections.sort(list);	//수업시간 풀이 
+		Collections.sort(list, new NameComparator());
+//		Collections.sort(list);	//수업시간 풀이 
 		
 		new MemberPrint().execute(list);
 	}
